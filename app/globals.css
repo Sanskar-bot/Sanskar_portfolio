@@ -103,3 +103,30 @@
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
+
+
+/* ── Hero: idle "floating" motion ──────────────────────────────────────────────
+   Used by components/sections/hero.tsx. Two nested layers per element:
+   .hero-float-y drifts up/down, .hero-float-x drifts sideways (+ tiny tilt).
+   Different durations on each layer => organic float, never a mechanical bounce.
+   Values come from CSS variables set inline in hero.tsx. Transform-only = GPU, no layout cost. */
+@keyframes hero-float-y {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, var(--float-y, -6px), 0); }
+}
+@keyframes hero-float-x {
+  from { transform: translate3d(0, 0, 0) rotate(0deg); }
+  to   { transform: translate3d(var(--float-x, 3px), 0, 0) rotate(var(--float-r, 0deg)); }
+}
+.hero-float-y {
+  animation: hero-float-y var(--float-y-dur, 6s) ease-in-out var(--float-y-delay, 0s) infinite alternate;
+}
+.hero-float-x {
+  animation: hero-float-x var(--float-x-dur, 8s) ease-in-out var(--float-x-delay, 0s) infinite alternate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-float-y,
+  .hero-float-x {
+    animation: none;
+  }
+}

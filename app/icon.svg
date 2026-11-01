@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 48">
   <defs>
-    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff7a18"/></linearGradient>
-    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a18"/><stop offset="1" stop-color="#c2410c"/></linearGradient>
+    <linearGradient id="a" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff7a18"/></linearGradient>
+    <linearGradient id="b" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0" stop-color="#ff8a1f"/><stop offset="1" stop-color="#c2410c"/></linearGradient>
   </defs>
-  <path d="M33 5 C22 1 7 5 7 15 C7 24 17 25 24 28 L24 19.5 C19 18 17 16.5 18 14.5 C19.5 12 27 12 33 14.5 Z" fill="url(#a)"/>
-  <path d="M7 43 C18 47 33 43 33 33 C33 24 23 23 16 20 L16 28.5 C21 30 23 31.5 22 33.5 C20.5 36 13 36 7 33.5 Z" fill="url(#b)"/>
+  <g transform="translate(4 0) skewX(-8)" fill="none" stroke-width="8.5">
+    <path d="M 29 9 A 11 9.5 0 0 0 9 14.5 A 11 9.5 0 0 0 19.7 24" stroke="url(#a)"/>
+    <path d="M 20.4 24.02 A 11 9.5 0 0 1 31 33.5 A 11 9.5 0 0 1 20 43 A 11 9.5 0 0 1 11 38.95" stroke="url(#b)"/>
+  </g>
 </svg>
-

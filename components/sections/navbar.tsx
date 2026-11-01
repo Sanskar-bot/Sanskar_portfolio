@@ -63,7 +63,7 @@ export function Navbar() {
       )}
     >
       <nav className="relative flex h-16 w-full items-center justify-between px-4 sm:px-6">
-        {/* Logo mark: folded-ribbon "S" */}
+        {/* Logo mark: split-ribbon "S" */}
         <a
           href="#top"
           aria-label="Sanskar Phougat — back to top"
@@ -71,23 +71,25 @@ export function Navbar() {
         >
           <svg viewBox="0 0 40 48" className="h-10 w-auto" aria-hidden>
             <defs>
-              <linearGradient id="sp-logo-a" x1="0" y1="0" x2="1" y2="1">
+              <linearGradient id="sp-logo-a" x1="0.1" y1="0" x2="0.9" y2="1">
                 <stop offset="0" stopColor="#ffb347" />
                 <stop offset="1" stopColor="#ff7a18" />
               </linearGradient>
-              <linearGradient id="sp-logo-b" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stopColor="#ff7a18" />
+              <linearGradient id="sp-logo-b" x1="0.1" y1="0" x2="0.9" y2="1">
+                <stop offset="0" stopColor="#ff8a1f" />
                 <stop offset="1" stopColor="#c2410c" />
               </linearGradient>
             </defs>
-            <path
-              d="M33 5 C22 1 7 5 7 15 C7 24 17 25 24 28 L24 19.5 C19 18 17 16.5 18 14.5 C19.5 12 27 12 33 14.5 Z"
-              fill="url(#sp-logo-a)"
-            />
-            <path
-              d="M7 43 C18 47 33 43 33 33 C33 24 23 23 16 20 L16 28.5 C21 30 23 31.5 22 33.5 C20.5 36 13 36 7 33.5 Z"
-              fill="url(#sp-logo-b)"
-            />
+            <g transform="translate(4 0) skewX(-8)" fill="none" strokeWidth="8.5">
+              <path
+                d="M 29 9 A 11 9.5 0 0 0 9 14.5 A 11 9.5 0 0 0 19.7 24"
+                stroke="url(#sp-logo-a)"
+              />
+              <path
+                d="M 20.4 24.02 A 11 9.5 0 0 1 31 33.5 A 11 9.5 0 0 1 20 43 A 11 9.5 0 0 1 11 38.95"
+                stroke="url(#sp-logo-b)"
+              />
+            </g>
           </svg>
         </a>
 
