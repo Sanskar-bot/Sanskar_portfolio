@@ -495,6 +495,7 @@ export function Hero() {
                 {/* Resume CTA */}
                 <a
                   href={profile.links.resume}
+                  download={profile.resumeFilename}
                   onClick={(e) => e.stopPropagation()}
                   className="mt-4 flex items-center gap-1.5 text-[12px] font-semibold text-[#FF7A18] transition-opacity hover:opacity-75"
                 >

@@ -12,13 +12,14 @@ export const profile = {
   available: true,
   status: 'Open to SDE roles (graduating 2027)',
   bio: "I'm a final-year Electronics and Communication Engineering student at JIIT Noida who prefers building software to reading about it. I work mostly on backend systems, with a strong interest in security: I design APIs, databases and deployment pipelines, and I treat encryption, access control and testing as part of the design from day one. My main project, MedVault, is a zero-trust medical records platform where the server only ever stores ciphertext. I also build browser extensions, run a public daily learning log, and teach workshops on cryptography, Python/Git and networking at my college. I'm looking for an SDE role where I can keep building reliable, secure software.",
+  resumeFilename: 'Sanskar_Phougat.pdf',
   links: {
     github: 'https://github.com/Sanskar-bot',
     linkedin: 'https://www.linkedin.com/in/sanskar-phougat',
     tryhackme: 'https://tryhackme.com/p/Sanskar2003',
     leetcode: 'https://leetcode.com/u/Sanskar_phougat/',
-    resume: '/resume.pdf',
-    email: 'mailto:sanskarphougat2004@gmail.com',
+    resume: '/Sanskar_Phougat.pdf',
+    email: 'https://mail.google.com/mail/?view=cm&fs=1&to=sanskarphougat34@gmail.com',
   },
 };
 

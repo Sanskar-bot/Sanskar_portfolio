@@ -151,6 +151,7 @@ export function Navbar() {
           </a>
           <a
             href={profile.links.resume}
+            download={profile.resumeFilename}
             className="ml-1 inline-flex h-8 items-center gap-1.5 rounded-md border border-white/10 bg-card/60 px-3 text-xs font-medium text-foreground transition-all hover:border-brand hover:text-brand"
           >
             <FileText className="h-3.5 w-3.5" />
@@ -227,6 +228,7 @@ export function Navbar() {
             </a>
             <a
               href={profile.links.resume}
+              download={profile.resumeFilename}
               onClick={() => setOpen(false)}
               className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 text-sm font-medium text-foreground transition-colors hover:border-brand hover:text-brand"
             >

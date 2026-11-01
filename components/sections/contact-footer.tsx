@@ -82,6 +82,8 @@ export function ContactFooter() {
           <div className="relative inline-block">
             <a
               href={profile.links.email}
+              target="_blank"
+              rel="noreferrer"
               className="group inline-flex h-12 items-center gap-2.5 rounded-xl bg-brand px-6 text-sm font-semibold text-black transition-all hover:bg-brand/90 hover:shadow-[0_0_25px_rgba(255,122,24,0.45)]"
             >
               <Mail className="h-4 w-4" />
@@ -153,6 +155,7 @@ function GhostLink({
     <div className="relative inline-block">
       <a
         href={href}
+        download={href === profile.links.resume ? profile.resumeFilename : undefined}
         target="_blank"
         rel="noreferrer"
         className="group inline-flex h-12 items-center gap-2 rounded-xl border border-white/10 bg-[#151515] px-4 text-sm font-medium text-foreground transition-all duration-200 hover:border-brand/40 hover:text-brand"
