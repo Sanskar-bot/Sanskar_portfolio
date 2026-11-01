@@ -20,7 +20,7 @@ const codeLines = [
   { text: 'export default bugs;', muted: true },
   { text: '// stay curious', comment: true },
   { text: 'git push origin main', muted: false },
-  { text: 'Python | JavaScript', muted: false },
+  { text: 'Python | C++', muted: false },
 ];
 
 // ── Idle "floating" motion (levitation loop) ──
@@ -54,25 +54,25 @@ function floatVars(c: FloatCfg) {
 }
 
 // Big word on the right. Small, slow, clearly visible.
-const DEVELOPER_FLOAT: FloatCfg = { y: -14, x: 8, r: 0.8, yDur: 5.2, xDur: 7.6, phase: 1.5 };
+const DEVELOPER_FLOAT: FloatCfg = { y: -16, x: 10, r: 1.0, yDur: 4.8, xDur: 7.0, phase: 1.5 };
 
 // One entry per line in `codeLines` (same order, same count = 13).
 // indent = static left offset in px (this is what makes the lines look scattered, not in a column)
 // scale  = font-size multiplier (some lines slightly bigger, like a loose code cloud)
 const CODE_LINE_LAYOUT: (FloatCfg & { indent: number; scale: number })[] = [
-  { indent: 26, scale: 1.0,  y: -8, x: 6,  yDur: 6.4, xDur: 9.0,  phase: 0.4 },
-  { indent: 7,  scale: 1.0,  y: -7, x: -5, yDur: 5.6, xDur: 8.2,  phase: 2.1 },
-  { indent: 0,  scale: 1.15, y: 8,  x: 6,  yDur: 7.2, xDur: 9.6,  phase: 3.3 },
-  { indent: 17, scale: 1.1,  y: 7,  x: -6, yDur: 5.0, xDur: 7.4,  phase: 4.7 },
-  { indent: 41, scale: 1.0,  y: -8, x: 5,  yDur: 6.8, xDur: 8.8,  phase: 1.1 },
-  { indent: 22, scale: 1.0,  y: -7, x: -4, yDur: 5.8, xDur: 9.4,  phase: 5.2 },
-  { indent: 0,  scale: 1.05, y: 8,  x: 6,  yDur: 6.0, xDur: 7.8,  phase: 2.8 },
-  { indent: 36, scale: 0.95, y: 7,  x: -5, yDur: 7.6, xDur: 10.0, phase: 0.9 },
-  { indent: 5,  scale: 1.05, y: -8, x: 5,  yDur: 5.4, xDur: 8.6,  phase: 3.9 },
-  { indent: 46, scale: 1.1,  y: -7, x: -6, yDur: 6.6, xDur: 7.2,  phase: 4.3 },
-  { indent: 14, scale: 1.0,  y: 8,  x: 4,  yDur: 7.0, xDur: 9.2,  phase: 1.8 },
-  { indent: 31, scale: 1.0,  y: 7,  x: -5, yDur: 5.2, xDur: 8.0,  phase: 5.6 },
-  { indent: 24, scale: 1.15, y: -8, x: 5,  yDur: 6.2, xDur: 9.8,  phase: 2.4 },
+  { indent: 25, scale: 1.0,  y: -10, x: 8,  yDur: 5.2, xDur: 7.6, phase: 0.4 },
+  { indent: 7,  scale: 1.0,  y: -9,  x: -7, yDur: 4.6, xDur: 7.0, phase: 2.1 },
+  { indent: 0,  scale: 1.1,  y: 10,  x: 8,  yDur: 5.8, xDur: 8.0, phase: 3.3 },
+  { indent: 16, scale: 1.05, y: 9,   x: -8, yDur: 4.4, xDur: 6.4, phase: 4.7 },
+  { indent: 39, scale: 1.0,  y: -10, x: 7,  yDur: 5.4, xDur: 7.4, phase: 1.1 },
+  { indent: 21, scale: 1.0,  y: -9,  x: -6, yDur: 4.8, xDur: 8.0, phase: 5.2 },
+  { indent: 0,  scale: 1.05, y: 10,  x: 8,  yDur: 5.0, xDur: 6.6, phase: 2.8 },
+  { indent: 34, scale: 0.95, y: 9,   x: -7, yDur: 6.0, xDur: 8.4, phase: 0.9 },
+  { indent: 5,  scale: 1.05, y: -10, x: 7,  yDur: 4.6, xDur: 7.2, phase: 3.9 },
+  { indent: 44, scale: 1.05, y: -9,  x: -8, yDur: 5.4, xDur: 6.2, phase: 4.3 },
+  { indent: 14, scale: 1.0,  y: 10,  x: 6,  yDur: 5.6, xDur: 7.8, phase: 1.8 },
+  { indent: 30, scale: 1.0,  y: 9,   x: -7, yDur: 4.4, xDur: 6.8, phase: 5.6 },
+  { indent: 23, scale: 1.1,  y: -10, x: 7,  yDur: 5.2, xDur: 8.2, phase: 2.4 },
 ];
 
 // ── Hand-written "Sanskar": drawn stroke by stroke, like a pen on paper ──
@@ -588,7 +588,7 @@ export function Hero() {
             animate: { opacity: 1 },
             transition: { duration: 0.8, delay: 0.5, ease },
           })}
-          className="flex flex-col gap-[clamp(5px,0.7vw,10px)]"
+          className="flex flex-col gap-[clamp(3px,0.45vw,7px)]"
         >
           {codeLines.map((line, i) => {
             const layout = CODE_LINE_LAYOUT[i];
@@ -603,7 +603,7 @@ export function Hero() {
                   className="hero-float-x whitespace-nowrap font-mono leading-snug"
                   style={{
                     ...fv.inner,
-                    fontSize: `calc(clamp(10.5px, 0.9vw, 14.5px) * ${layout.scale})`,
+                    fontSize: `calc(clamp(10px, 0.8vw, 13px) * ${layout.scale})`,
                     color: line.brand
                       ? '#FF7A18'
                       : line.comment
